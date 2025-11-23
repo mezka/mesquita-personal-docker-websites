@@ -1,0 +1,21 @@
+services:
+  mesquita-contact-api:
+    build:
+      context: ./mesquita-contact-api
+    profiles: ["mesquita-contact-api"]
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+  certbot:
+    image: certbot/certbot:latest
+    profiles: ["certbot"]
+    entrypoint: ["/certbot-entrypoint.sh"]
+    environment:
+    - USE_STAGING=false
+    volumes:
+      - /etc/letsencrypt-personal:/etc/letsencrypt/
+      - ./certbot-entrypoint.sh:/certbot-entrypoint.sh:ro
+      - ./islasantiago.com:/var/www/islasantiago.com
+    restart: unless-stopped

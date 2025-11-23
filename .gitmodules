@@ -1,0 +1,6 @@
+[submodule "islasantiago.com"]
+	path = islasantiago.com
+	url = git@github.com:mezka/islasantiago.com.git
+[submodule "mesquita-contact-api"]
+	path = mesquita-contact-api
+	url = git@github.com:mezka/mesquita-contact-api.git
