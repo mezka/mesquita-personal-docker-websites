@@ -18,4 +18,5 @@ services:
       - /etc/letsencrypt-personal:/etc/letsencrypt/
       - ./certbot-entrypoint.sh:/certbot-entrypoint.sh:ro
       - ./islasantiago.com:/var/www/islasantiago.com
+      - ./cabanaislasantiago.com:/var/www/cabanaislasantiago.com
     restart: unless-stopped
