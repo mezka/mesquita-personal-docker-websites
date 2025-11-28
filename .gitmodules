@@ -4,3 +4,6 @@
 [submodule "mesquita-contact-api"]
 	path = mesquita-contact-api
 	url = git@github.com:mezka/mesquita-contact-api.git
+[submodule "cabanaislasantiago.com"]
+	path = cabanaislasantiago.com
+	url = git@github.com:mezka/cabanaislasantiago.com.git
